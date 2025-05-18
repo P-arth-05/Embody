@@ -83,7 +83,7 @@ Embody redefines recovery tracking by offering a **comprehensive, intelligent, a
 
 ### Access the Application
 
-For judging and review, access the deployed application here: [https://embody-blond.vercel.](https://embody-blond.vercel.app/)[app/](https://embody-blond.vercel.app/)
+For judging and review, access the deployed application here: [https://em-body.vercel.](https://em-body.vercel.app/)[app/](https://em-body.vercel.app/)
 
 ### Work in Progress
 
