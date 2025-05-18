@@ -1,0 +1,151 @@
+.hero-gradient {
+  background: linear-gradient(to right, #accbee 0%, #e7f0fd 100%);
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(to right, #1a1f2c 0%, #221f26 100%);
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: width 0.2s ease, height 0.2s ease, border-radius 0.2s ease;
+}
+
+.dark .custom-cursor {
+  background-color: #fff;
+}
+
+.cursor-hover {
+  width: 40px;
+  height: 40px;
+}
+
+.cursor-fast {
+  width: 25px;
+  height: 20px;
+  border-radius: 35%;
+}
+
+.cursor-medium {
+  width: 22px;
+  height: 20px;
+  border-radius: 40%;
+}
+
+body {
+  scroll-behavior: smooth !important;
+  scroll-timeline: 2.5s cubic-bezier(0.65, 0, 0.35, 1) !important;
+}
+
+a, button, [role="button"], input, select, textarea {
+  /* Remove cursor: none to show default cursor */
+}
+
+/* Keep existing animations */
+.feature-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.testimonial-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-xl;
+}
+
+.floating-animation {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .7; }
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.icon-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-fade {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease-out;
+}
+
+.image-fade.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.section-transition.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.stagger-animation > *.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
